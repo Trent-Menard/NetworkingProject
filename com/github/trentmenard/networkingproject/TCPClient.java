@@ -1,46 +1,49 @@
 package com.github.trentmenard.networkingproject;
 
 import java.io.*;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 import static java.lang.System.in;
 
 public class TCPClient {
-    private Socket socket = null;
-    private ServerSocket serverSocket;
-    private BufferedReader dIStream;
-    private DataOutputStream dOStream;
-    private final String address;
-    private final int port;
 
-    public TCPClient(String address, int port){
-        this.address = address;
-        this.port = port;
-        this.connect(address, port);
-    }
+    public static void main(String[] args) {
+        // Change server port here
+        final int SERVER_PORT = 9999;
 
-    void connect(String address, int port){
+        // Change host address here
+        // (Could default to loopback address but trying to make this
+        // program more "generic". I.e.: ability to connect to host's other
+        // than this machine)
+        final String HOST_ADDRESS = "localhost";
+
+        final Scanner clientInput = new Scanner(in);
+
+        // Create socket connection.
         try {
-            this.socket = new Socket(address, port);
-            System.out.println("[Info:] Connected to Server: " + socket.getLocalAddress());
+            Socket connectionSocket = new Socket(InetAddress.getByName(HOST_ADDRESS), SERVER_PORT);
+            System.out.println("[Info:] Connected to Server: " + connectionSocket.getLocalAddress());
 
-            // Input Stream (from terminal)
-            dIStream = new BufferedReader(new InputStreamReader(in));
+            // Server -> Client
+            DataInputStream clientServerInput = new DataInputStream(connectionSocket.getInputStream());
 
-            // Output Stream (to socket)
-            this.dOStream = new DataOutputStream(socket.getOutputStream());
+            // Client -> Server
+            DataOutputStream clientServerOutput = new DataOutputStream(connectionSocket.getOutputStream());
 
-            String line = "";
+            String toServer = "";
 
-            while (!(line.equals("@exit"))){
-                line = dIStream.readLine();
-                dOStream.writeUTF(line);
-
-                // Count to 10.
-                for (int i = 0; i <= 10; i++)
-                    System.out.println(i + "...\n");
+            while((!toServer.equals("@exit"))){
+                System.out.print("Enter Response: ");
+                toServer = clientInput.nextLine();
+                clientServerOutput.writeUTF(toServer);
             }
+
+            connectionSocket.close();
+            System.out.println("[Client-Info] You terminated the connection.");
 
         } catch (IOException e) {
             e.printStackTrace();

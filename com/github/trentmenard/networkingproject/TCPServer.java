@@ -5,48 +5,44 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TCPServer {
-    private Socket socket = null;
-    private ServerSocket serverSocket;
-    private DataInputStream iStream;
-    private final int port;
 
-    public TCPServer(int port){
-        this.port = port;
-        System.out.println("[Info:] Started Server using Port: " + port);
-        this.start();
-    }
+    public static void main(String[] args) {
 
-    private void start(){
-        System.out.println("[Info:] Waiting for Client connection...");
+        // Change server port here (in case of conflicts).
+        final int SERVER_PORT = 9999;
+
+        // Not the best practice to group all these potential exceptions, but it
+        // should be fine for this program's case.
         try {
-            // Create socket
-            this.serverSocket = new ServerSocket(port);
+            // Create Server Socket
+            ServerSocket serverSocket = new ServerSocket(SERVER_PORT);
+            System.out.println("[Server-Info:] Created new Server on port: " + SERVER_PORT);
+            System.out.println("[Server-Info:] Waiting for Client connection...");
 
-            // Allow connections.
-            this.serverSocket.accept();
-            System.out.println("[Info:] Connected to Client: " + this.serverSocket.getLocalSocketAddress());
+            // Accept Incoming Requests (blocks until connection established)
+            Socket socketConnection = serverSocket.accept();
+            System.out.println("[Server-Info:] Connected to Client: " + serverSocket.getInetAddress());
 
-            // Create BufferedReader to read from socket.
-            this.iStream = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+            // Get Client/Server Input stream.
+            System.out.println("[Server-Info:] Listening for Client input.");
 
-            System.out.println("[Info:] Listening for Input (use @exit to close connection.): ");
+            DataInputStream clientServerInput = new DataInputStream(socketConnection.getInputStream());
 
-            String line = "";
+            String fromClient;
 
-            while (!(line.equals("@exit"))){
-                line = iStream.readUTF();
-                System.out.println(line);
+            // Keeps connection alive until Client sends '@exit' (or connection is closed, ofc.)
+            while(!(socketConnection.isClosed())){
+                fromClient = clientServerInput.readUTF();
+                System.out.println("[Server-Info:] Client " + socketConnection.getInetAddress() +  " says: " + fromClient);
 
-                // Count to 10.
-                for (int i = 0; i <= 10; i++)
-                    System.out.println(i + "...\n");
+                if (fromClient.equals("@exit")){
+                    socketConnection.close();
+                    System.out.println("[Server-Info] Client " + socketConnection.getInetAddress() + " terminated their connection.");
+                }
             }
 
-            System.out.println("[Info:] Closing Connection.");
-            this.socket.close();
-            this.iStream.close();
         } catch (IOException e) {
-            System.err.println("[Error:] Client refused.");
+            System.err.println("[Server-Error:] Something went wrong during Server setup.");
             e.printStackTrace();
         }
     }
