@@ -7,16 +7,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be0a1fda-713f-4872-baa7-1f8a141c7ff7" name="Changes" comment="Remove .jar from .gitignore &amp; add files">
-      <change afterPath="$PROJECT_DIR$/manifests/TCPClient/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifests/TCPServer/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TCPClient/TCPClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TCPClient/TCPClient.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TCPServer/TCPServer.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TCPServer/TCPServer.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetworkingProject/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetworkingProject/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetworkingProject/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NetworkingProject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetworkingProject/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="be0a1fda-713f-4872-baa7-1f8a141c7ff7" name="Changes" comment="Fix manifests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +56,21 @@
       <option name="project" value="LOCAL" />
       <updated>1646094667976</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix manifests">
+      <created>1646097293367</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1646097293367</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix manifests">
+      <created>1646097426989</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646097426989</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,6 +87,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Code re-write again. See README for known issues." />
     <MESSAGE value="Remove .jar from .gitignore &amp; add files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove .jar from .gitignore &amp; add files" />
+    <MESSAGE value="Fix manifests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix manifests" />
   </component>
 </project>
