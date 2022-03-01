@@ -33,7 +33,7 @@ This is my implementation of a TCP Server/Client relationship for my networking 
 
 ## Built With
 
-[Java](https://www.vectorlogo.zone/logos/java/java-icon.svg)
+![Java](https://www.vectorlogo.zone/logos/java/java-icon.svg)
 
 ## Getting Started
 
@@ -43,18 +43,18 @@ Follow these steps to play the game (notice prerequisites).
 
 This project was written in Java 17. Earlier versions may suffice but Java 17 is recommended. Specifically, Zulu-17 was used, available at:
 
-* https://www.azul.com/downloads/?version=java-17-lts&package=jdk
+* [Azul](https://www.azul.com/downloads/?version=java-17-lts&package=jdk)
 
 ### Installation
 
-1. Download & extract TCPServer.jar & TCPClient.jar.
+1. Download & extract `TCPServer.jar` & `TCPClient.jar`.
 
 ## Usage
 
  *Note: The following assumes using Command Prompt (Windows OS)*
 1. Navigate to the directory using `cd (directory path)`.
 2. Run TCPServer using `java -jar TCPServer.jar`.
-3. Run TCPClient using `java -jar TCPClient.jar`.
+3. Run TCPClient using `java java -jar TCPClient.jar`.
 
 ## Known Issues
 
@@ -88,8 +88,8 @@ Distributed under the MIT License. See [LICENSE](https://github.com/Trent-Menard
 
 ## Acknowledgements
 
-* [ShaanCoding] - README generaor - (https://github.com/ShaanCoding/)
-* [Othneil Drew] - Original README template - (https://github.com/othneildrew/Best-README-Template)
-* [ImgShields] - Banners at the top - (https://shields.io/)
-* [Callicoder] - Completeable Future reference - (https://www.callicoder.com/java-8-completablefuture-tutorial/)
-* [Geeks for Geeks] - Inital Socket Programming Design - (https://www.geeksforgeeks.org/introducing-threads-socket-programming-java/?ref=lbp)
+* [ShaanCoding](https://github.com/ShaanCoding/) - README generator
+* [Othneil Drew](https://github.com/othneildrew/Best-README-Template) - Original README template
+* [ImgShields](https://shields.io/) - Banners at the top
+* [Callicoder](https://www.callicoder.com/java-8-completablefuture-tutorial/) - Completeable Future reference
+* [Geeks for Geeks](https://www.geeksforgeeks.org/introducing-threads-socket-programming-java/?ref=lbp) - Inital Socket Programming Design
