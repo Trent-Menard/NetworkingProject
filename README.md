@@ -47,14 +47,14 @@ This project was written in Java 17. Earlier versions may suffice but Java 17 is
 
 ### Installation
 
-1. Download & extract `TCPServer.jar` & `TCPClient.jar`.
+1. Download [TCPServer](../main/out/artifacts/TCPServer) & [TCPClient](../main/out/artifacts/TCPClient)
 
 ## Usage
 
  *Note: The following assumes using Command Prompt (Windows OS)*
 1. Navigate to the directory using `cd (directory path)`.
 2. Run TCPServer using `java -jar TCPServer.jar`.
-3. Run TCPClient using `java java -jar TCPClient.jar`.
+3. Run TCPClient using `java -jar TCPClient.jar`.
 
 ## Known Issues
 
@@ -68,7 +68,6 @@ Contributions are what make the open source community such an amazing place to b
 * If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/Trent-Menard/NetworkingProject/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
-* Please also read through the [Code Of Conduct](https://github.com/Trent-Menard/NetworkingProject/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
 
 ### Creating A Pull Request
 
@@ -80,7 +79,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/Trent-Menard/NetworkingProject/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/Trent-Menard/NetworkingProject/blob/main/LICENSE) for more information.
 
 ## Authors
 
