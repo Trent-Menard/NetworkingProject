@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="TCPClient" />
+      <artifact name="TCPServer" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be0a1fda-713f-4872-baa7-1f8a141c7ff7" name="Changes" comment="Remove .jar from .gitignore &amp; add files">
+      <change afterPath="$PROJECT_DIR$/manifests/TCPClient/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manifests/TCPServer/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TCPClient/TCPClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TCPClient/TCPClient.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TCPServer/TCPServer.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TCPServer/TCPServer.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetworkingProject/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetworkingProject/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetworkingProject/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NetworkingProject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NetworkingProject/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25jJ2cLw1TM9KynGWvCCsMHE7FT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/manifests/TCPClient" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be0a1fda-713f-4872-baa7-1f8a141c7ff7" name="Changes" comment="" />
+      <created>1646034357916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646034357916</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Code re-write again. See README for known issues.">
+      <created>1646034958261</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1646034958261</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Remove .jar from .gitignore &amp; add files">
+      <created>1646094667976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646094667976</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Code re-write again. See README for known issues." />
+    <MESSAGE value="Remove .jar from .gitignore &amp; add files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove .jar from .gitignore &amp; add files" />
+  </component>
+</project>
