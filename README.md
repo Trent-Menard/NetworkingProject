@@ -54,7 +54,7 @@ This project was written in Java 17. Earlier versions may suffice but Java 17 is
  *Note: The following assumes using Command Prompt (Windows OS)*
 1. Navigate to the directory using `cd (directory path)`.
 2. Run TCPServer using `java -jar TCPServer.jar`.
-3. Run TCPClient using `java java -jar TCPClient.jar`.
+3. Run TCPClient using `java -jar TCPClient.jar`.
 
 ## Known Issues
 
