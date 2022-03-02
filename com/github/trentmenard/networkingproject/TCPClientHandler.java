@@ -16,11 +16,9 @@ public class TCPClientHandler {
     private final AtomicInteger countdown = new AtomicInteger(90);
     private final AtomicBoolean won = new AtomicBoolean(false);
 
-    public TCPClientHandler(Socket serverClientSocket, int client) {
+    public TCPClientHandler(Socket serverClientSocket) {
         this.serverClientSocket = serverClientSocket;
         boolean hasIOStream = getIOStream(serverClientSocket);
-
-        System.out.println("[Server-Info:] Assigned Client: " + serverClientSocket.getInetAddress() + " to Client #" + client);
 
         if (hasIOStream)
             this.beginGame();

@@ -4,10 +4,9 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.ForkJoinPool;
 
 public class TCPServer {
-    static final AtomicInteger activeConnectionsCount = new AtomicInteger(0);
 
     public static void main(String[] args) {
 
@@ -25,12 +24,12 @@ public class TCPServer {
                 // Accept Incoming Requests (blocks until connection established)
                 final Socket socketConnection = serverSocket.accept();
                 System.out.println("[Server-Info:] Connected to Client: " + serverSocket.getInetAddress());
+                System.out.println("[Server-Info:] Client Games In-progress: " + ForkJoinPool.commonPool().getRunningThreadCount());
+                System.out.println("[Server-Info:] Clients Awaiting Game Start: " + ForkJoinPool.commonPool().getQueuedSubmissionCount());
+                System.out.println("[Server-Info:] Clients Queued: " + ForkJoinPool.commonPool().getQueuedTaskCount() + "\n");
 
-                // Handle Client on a separate TCPClientHandler thread (also adds to count).
-                CompletableFuture.runAsync(() -> new TCPClientHandler(socketConnection, activeConnectionsCount.incrementAndGet()))
-                        .thenRun(TCPServer.activeConnectionsCount::decrementAndGet);
-
-                System.out.println("Active Connections: " + activeConnectionsCount.get());
+                // Handle Client on ForkJoinPool (separate threads) & add to count.
+                CompletableFuture.runAsync(() -> new TCPClientHandler(socketConnection));
             }
 
         } catch (IOException e) {
