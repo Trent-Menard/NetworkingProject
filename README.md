@@ -56,8 +56,7 @@ This project was written in Java 17. Earlier versions may suffice but Java 17 is
 1. Navigate to the directory using `cd (directory path)`.
 2. Run TCPServer using `java -jar TCPServer.jar`.
 3. Run TCPClient using `java -jar TCPClient.jar`.
-![ExecutingExample](../ExecutingExample.PNG)
-
+![ExecutingExample](https://github.com/Trent-Menard/NetworkingProject/blob/main/ExecutingExample.png)
 ## Known Issues
 
 * Server's incoming Outputstream must be read by Client's Inputstream before it can send its response.<br/>As a result, the Server may have already closed the Socket (ended the game) before the Client sends its response (slight desyncronization)<br/>I've attempted to handle this by checking for this in the Client's code.
