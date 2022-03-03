@@ -48,7 +48,7 @@ This project was written in Java 17. Earlier versions may suffice but Java 17 is
 ### Installation
 
 1. Download [TCPServer](../main/out/artifacts/TCPServer) & [TCPClient](../main/out/artifacts/TCPClient)
-2. or Download & extract [TCPClientServerZip](../main/out/artifacts/TCPClientServerZip)
+2. or Download & extract [TCPClientServerZip](../main/out/artifacts/TCPServerClientZip)
 
 ## Usage
 
@@ -56,6 +56,7 @@ This project was written in Java 17. Earlier versions may suffice but Java 17 is
 1. Navigate to the directory using `cd (directory path)`.
 2. Run TCPServer using `java -jar TCPServer.jar`.
 3. Run TCPClient using `java -jar TCPClient.jar`.
+![ExecutingExample](../main/ExecutingExample.PNG)
 
 ## Known Issues
 
