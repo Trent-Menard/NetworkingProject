@@ -48,6 +48,7 @@ This project was written in Java 17. Earlier versions may suffice but Java 17 is
 ### Installation
 
 1. Download [TCPServer](../main/out/artifacts/TCPServer) & [TCPClient](../main/out/artifacts/TCPClient)
+2. or Download & extract [TCPClientServerZip](../main/out/artifacts/TCPClientServerZip)
 
 ## Usage
 
@@ -58,7 +59,9 @@ This project was written in Java 17. Earlier versions may suffice but Java 17 is
 
 ## Known Issues
 
-* Server's incoming Outputstream must be read by Client's Inputstream before it can send its response.<br/>As a result, the Server may have already closed the Socket (ended the game) before the Client sends its response (slight desyncronization)<br/>I've attempted to handle this by checking for this in the Client's code..
+* Server's incoming Outputstream must be read by Client's Inputstream before it can send its response.<br/>As a result, the Server may have already closed the Socket (ended the game) before the Client sends its response (slight desyncronization)<br/>I've attempted to handle this by checking for this in the Client's code.
+* Server cannot distinguish Client disconnection type so still prints they ran out of time.
+* I didn't realize this until after making the ServerStressTest.bat but Server Client handle (ForkJoinPool) threads are limited to pc's processing power. Java Docs say default pool can be replaced but I'm unsure how to go about doing this. 
 
 See the [open issues](https://github.com/Trent-Menard/NetworkingProject/issues) for a list of proposed features (and known issues).
 
